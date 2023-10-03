@@ -15,3 +15,8 @@ class Address(BaseModel):
     """Address model"""
 
     full_address: str
+
+
+class FullDate(BaseModel):
+    number: Phone
+    address: Address
