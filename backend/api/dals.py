@@ -1,0 +1,1 @@
+"""The module contains methods for working with a database"""

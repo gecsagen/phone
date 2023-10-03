@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-
+  #  service for launching fastapi applications
   web:
     build: ./backend
     command: uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
@@ -12,7 +12,8 @@ services:
     restart: always
     depends_on:
       - web-db
-
+  
+  #  redis database service
   redis:
     image: redis:latest
     restart: always
