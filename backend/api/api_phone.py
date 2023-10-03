@@ -14,11 +14,11 @@ async def check_data(phone: Phone) -> Address:
 
 #  endpoint for creating phone and address
 @phone_router.post("/write_data")
-async def write_data(phone_address: Address):
+async def write_data(data: FullDate):
     return {"message": "Hello World"}
 
 
 #  endpoint for updating phone and address
 @phone_router.put("/write_data")
-async def update_data(phone_address: FullDate):
+async def update_data(data: FullDate):
     return {"message": "Hello World"}

@@ -11,7 +11,7 @@ services:
       - 8004:8000
     restart: always
     depends_on:
-      - web-db
+      - redis
   
   #  redis database service
   redis:
@@ -23,6 +23,6 @@ services:
       - /path/to/local/dаta:/root/redis
       - /path/to/local/redis.conf:/usr/local/etc/redis/redis.conf
     environment:
-      - REDIS_PASSWORD=my-password
+      #- REDIS_PASSWORD=my-password
       - REDIS_PORT=6379
       - REDIS_DATABASES=16
