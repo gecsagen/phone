@@ -2,7 +2,6 @@
 
 
 from pydantic import BaseModel
-from pydantic.types import ph
 
 
 class Phone(BaseModel):

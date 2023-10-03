@@ -8,10 +8,10 @@ async def _check_data(phone: Phone) -> Address:
 
 
 #  service for adding phone number and address
-async def _write_data(FullDate):
+async def _write_data(phone_address: FullDate):
     return {"message": FullDate(number="test", address="test")}
 
 
 #  service for updating phone number and address
-async def _update_data(FullDate):
+async def _update_data(phone_address: FullDate):
     return {"message": FullDate(number="test", address="test")}
