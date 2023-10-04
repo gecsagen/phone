@@ -27,4 +27,4 @@ class PersonalInfo:
 
     # update a record with personal information
     async def update_personal_info(self, data: FullDate) -> None:
-        self.db_session.hmset(data.number, data.model_dump(exclude_unset=True))
+        self.db_session.set(data.number.number, data.address.full_address)
