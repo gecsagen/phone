@@ -13,7 +13,7 @@ phone_router = APIRouter()
 
 #  endpoint for getting phone and address
 @phone_router.get("/check_data")
-async def check_data(phone: Phone) -> Address:
+async def check_data(phone: str) -> Address:
     personal_date = await _check_data(phone)
     if personal_date is None:
         raise HTTPException(status_code=404, detail=f"User with id {phone} not found.")

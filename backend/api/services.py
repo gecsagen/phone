@@ -1,10 +1,10 @@
 """The module contains service functions"""
 from .schemas import Phone, Address, FullDate
-from dals import PersonalInfo
+from .dals import PersonalInfo
 
 
 #  service for obtaining an address
-async def _check_data(phone: Phone) -> Address:
+async def _check_data(phone: str) -> Address:
     personal_dal = PersonalInfo()
     personal_date = await personal_dal.get_personal_info(phone=phone)
     return personal_date
